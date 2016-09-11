@@ -22,14 +22,33 @@
 <body>
     <header class="default-primary-color">
         <nav class="default-primary-color">
-            <div class="nav-wrapper">
+      <!---      <div class="nav-wrapper">
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
                 <ul class="side-nav" id="mobile-demo">
+                  <i class="material-icons right">close</i>
                     <li><a href="#works">Portfolio</a></li>
                     <li><a href="#resume">Resume</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-            </div>
+            </div>-->
+            <!-- Navigation -->
+<div class="hide-on-med-and-up">
+<div class="b-nav">
+  <li><a class="b-link" href="#works">Works</a></li>
+  <li><a class="b-link" href="#resume">Resume</a></li>
+  <li><a class="b-link" href="#contact">Contact</a></li>
+</div>
+
+<!-- Burger-Icon -->
+<div class="b-container">
+  <div class="b-menu">
+    <div class="b-bun b-bun--top"></div>
+    <div class="b-bun b-bun--mid"></div>
+    <div class="b-bun b-bun--bottom"></div>
+  </div>
+</div>
+</div>
         </nav>
         </div>
         <img src="images/head-shoot.jpg" alt="" class="circle responsive-img">
@@ -362,6 +381,26 @@
                 return false;
             });
         });
+
+        (function() {
+  var body = document.body;
+  var burgerMenu = document.getElementsByClassName('b-menu')[0];
+  var burgerContain = document.getElementsByClassName('b-container')[0];
+  var burgerNav = document.getElementsByClassName('b-nav')[0];
+
+  burgerMenu.addEventListener('click', function toggleClasses() {
+    [body, burgerContain, burgerNav].forEach(function (el) {
+      el.classList.toggle('open');
+    });
+  }, false);
+
+  burgerNav.addEventListener('click', function toggleClasses() {
+    [body, burgerContain, burgerNav].forEach(function (el) {
+      el.classList.remove('open');
+    });
+  }, false);
+
+})();
     </script>
     <script type="text/javascript">
         (function(i, s, o, g, r, a, m) {

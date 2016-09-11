@@ -7,11 +7,6 @@
 <body>
 
 <?php
-ini_set('display_errors', 'On');
-ini_set('error_reporting', E_ALL & ~E_NOTICE);
-//Messaggio d'errore per campi mancanti
-//Error message for missing fields
-$error_missing_fields= 'Per favore, completate tutti i campi del form indicati';
 //Messaggio d'errore del server mail
 //Error message for mail server
 $error_mail_server = 'Siamo spiacenti. Si &egrave; verificato un errore e
@@ -26,6 +21,7 @@ function test_input($data){
 	$data = htmlspecialchars($data);
 	return $data;
 }
+
 $errors = array();
 // Check for a proper First name
 if (!empty($_POST['name'])) {
